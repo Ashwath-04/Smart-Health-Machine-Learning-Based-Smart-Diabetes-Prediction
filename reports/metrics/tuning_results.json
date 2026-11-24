@@ -48,7 +48,7 @@
       },
       "best_cv_score": 0.737568760136369,
       "n_trials": 40,
-      "seconds": 12.2
+      "seconds": 69.7
     },
     "extratrees": {
       "best_params": {
@@ -61,7 +61,7 @@
       },
       "best_cv_score": 0.74469352764989,
       "n_trials": 40,
-      "seconds": 11.5
+      "seconds": 112.6
     },
     "catboost": {
       "best_params": {
@@ -73,7 +73,7 @@
       },
       "best_cv_score": 0.7509942598817398,
       "n_trials": 30,
-      "seconds": 34.2
+      "seconds": 479.7
     }
   },
   "meta": {

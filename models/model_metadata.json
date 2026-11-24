@@ -1,11 +1,11 @@
 {
   "model_name": "stacking_smote_tuned",
   "display_name": "Stacking (XGB+ET+CB -> LR) | SMOTE | tuned",
-  "model_version": "stacking_smote_tuned-20261006-17ecf561",
+  "model_version": "stacking_smote_tuned-20261124-17ecf561",
   "package_version": "1.0.0",
   "dataset_version": "pima-uci-768-v1",
   "dataset_sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
-  "training_date": "2026-10-06T07:19:11.448764+00:00",
+  "training_date": "2026-11-24T19:45:32.187025+00:00",
   "features": [
     "Pregnancies",
     "Glucose",
@@ -263,7 +263,7 @@
     "intercept": -3.3277622966048788
   },
   "test_metrics": {
-    "evaluated_at": "2026-10-06T07:22:21.605689+00:00",
+    "evaluated_at": "2026-11-24T19:51:33.114423+00:00",
     "n_test": 154,
     "balanced": {
       "threshold": 0.32,
