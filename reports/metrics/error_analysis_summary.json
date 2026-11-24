@@ -1,0 +1,54 @@
+{
+  "test": {
+    "threshold": 0.32,
+    "counts": {
+      "TP": 44,
+      "FN": 10,
+      "FP": 29,
+      "TN": 71
+    },
+    "fn_share_with_glucose_below_126": 0.8,
+    "tp_share_with_glucose_below_126": 0.29545454545454547,
+    "fp_share_with_glucose_at_least_126": 0.7241379310344828,
+    "tn_share_with_glucose_at_least_126": 0.09859154929577464,
+    "fn_median_age": 27.5,
+    "tp_median_age": 38.0,
+    "fn_median_bmi": 29.3,
+    "tp_median_bmi": 34.55,
+    "mean_missing_inputs_by_type": {
+      "FN": 1.3,
+      "FP": 0.862,
+      "TN": 0.944,
+      "TP": 1.045
+    },
+    "n_borderline_0.10": 25,
+    "error_rate_borderline_0.10": 0.32,
+    "error_rate_confident_gt_0.30": 0.3055555555555556
+  },
+  "train_oof": {
+    "threshold": 0.32,
+    "counts": {
+      "TP": 174,
+      "FN": 40,
+      "FP": 103,
+      "TN": 297
+    },
+    "fn_share_with_glucose_below_126": 0.8,
+    "tp_share_with_glucose_below_126": 0.21264367816091953,
+    "fp_share_with_glucose_at_least_126": 0.5922330097087378,
+    "tn_share_with_glucose_at_least_126": 0.10774410774410774,
+    "fn_median_age": 28.0,
+    "tp_median_age": 37.5,
+    "fn_median_bmi": 31.8,
+    "tp_median_bmi": 34.9,
+    "mean_missing_inputs_by_type": {
+      "FN": 0.875,
+      "FP": 0.893,
+      "TN": 0.747,
+      "TP": 0.874
+    },
+    "n_borderline_0.10": 109,
+    "error_rate_borderline_0.10": 0.3211009174311927,
+    "error_rate_confident_gt_0.30": 0.2366412213740458
+  }
+}

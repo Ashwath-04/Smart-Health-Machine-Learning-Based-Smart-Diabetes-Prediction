@@ -1,0 +1,87 @@
+{
+  "base_params": {
+    "xgboost": {
+      "n_estimators": 500,
+      "max_depth": 5,
+      "learning_rate": 0.014608627448765146,
+      "subsample": 0.569912362604018,
+      "colsample_bytree": 0.8163669103026254,
+      "min_child_weight": 4.760018604883567,
+      "reg_alpha": 0.010867230658106504,
+      "reg_lambda": 0.0988466112268991,
+      "smote_k_neighbors": 8
+    },
+    "extratrees": {
+      "max_depth": 16,
+      "n_estimators": 650,
+      "min_samples_split": 19,
+      "min_samples_leaf": 9,
+      "max_features": "log2",
+      "smote_k_neighbors": 5
+    },
+    "catboost": {
+      "iterations": 550,
+      "depth": 3,
+      "learning_rate": 0.013132935817989952,
+      "l2_leaf_reg": 12.363572741030406,
+      "smote_k_neighbors": 4
+    }
+  },
+  "meta_params": {
+    "C": 1.2985735596930341,
+    "l1_ratio": 0.0,
+    "solver": "lbfgs"
+  },
+  "metric": "average_precision",
+  "base": {
+    "xgboost": {
+      "best_params": {
+        "n_estimators": 500,
+        "max_depth": 5,
+        "learning_rate": 0.014608627448765146,
+        "subsample": 0.569912362604018,
+        "colsample_bytree": 0.8163669103026254,
+        "min_child_weight": 4.760018604883567,
+        "reg_alpha": 0.010867230658106504,
+        "reg_lambda": 0.0988466112268991,
+        "smote_k_neighbors": 8
+      },
+      "best_cv_score": 0.737568760136369,
+      "n_trials": 40,
+      "seconds": 12.2
+    },
+    "extratrees": {
+      "best_params": {
+        "max_depth": 16,
+        "n_estimators": 650,
+        "min_samples_split": 19,
+        "min_samples_leaf": 9,
+        "max_features": "log2",
+        "smote_k_neighbors": 5
+      },
+      "best_cv_score": 0.74469352764989,
+      "n_trials": 40,
+      "seconds": 11.5
+    },
+    "catboost": {
+      "best_params": {
+        "iterations": 550,
+        "depth": 3,
+        "learning_rate": 0.013132935817989952,
+        "l2_leaf_reg": 12.363572741030406,
+        "smote_k_neighbors": 4
+      },
+      "best_cv_score": 0.7509942598817398,
+      "n_trials": 30,
+      "seconds": 34.2
+    }
+  },
+  "meta": {
+    "best_params": {
+      "C": 1.2985735596930341,
+      "l1_ratio": 0.0,
+      "solver": "lbfgs"
+    },
+    "best_cv_score": 0.7363313279676854
+  }
+}

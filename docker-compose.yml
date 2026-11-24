@@ -1,0 +1,42 @@
+# docker compose up --build              -> API (:8000) + Streamlit UI (:8501)
+# docker compose --profile train run --rm trainer   -> retrain + evaluate into ./models, ./reports
+# docker compose --profile tracking up mlflow       -> MLflow UI (:5000)
+services:
+  api:
+    build: { context: ., target: serve }
+    image: smart-health-diabetes:serve
+    ports: ["8000:8000"]
+    volumes:
+      - ./models:/app/models:ro
+      - ./reports:/app/reports:ro
+
+  ui:
+    image: smart-health-diabetes:serve
+    command: ["streamlit", "run", "app/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.headless=true"]
+    environment:
+      API_URL: http://api:8000
+    ports: ["8501:8501"]
+    volumes:
+      - ./models:/app/models:ro
+      - ./reports:/app/reports:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=4)"]
+      interval: 30s
+      start_period: 30s
+    depends_on:
+      api: { condition: service_healthy }
+
+  trainer:
+    profiles: ["train"]
+    build: { context: ., target: train }
+    image: smart-health-diabetes:train
+    volumes:
+      - ./:/app
+
+  mlflow:
+    profiles: ["tracking"]
+    image: smart-health-diabetes:train
+    command: ["mlflow", "ui", "--backend-store-uri", "sqlite:////app/mlflow.db", "--host", "0.0.0.0", "--port", "5000"]
+    ports: ["5000:5000"]
+    volumes:
+      - ./:/app

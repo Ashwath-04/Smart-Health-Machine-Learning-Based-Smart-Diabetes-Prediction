@@ -1,0 +1,236 @@
+{
+  "expected_value": 0.3521281294222321,
+  "global_importance": [
+    {
+      "feature": "Glucose",
+      "mean_abs_shap": 0.14708352008715744,
+      "mean_shap": -0.01342656674595212
+    },
+    {
+      "feature": "BMI",
+      "mean_abs_shap": 0.07446116641626738,
+      "mean_shap": 0.009070134803469788
+    },
+    {
+      "feature": "Age",
+      "mean_abs_shap": 0.04653848503209883,
+      "mean_shap": -0.00022588303986607
+    },
+    {
+      "feature": "DiabetesPedigreeFunction",
+      "mean_abs_shap": 0.04116571099468328,
+      "mean_shap": -0.004508887168096695
+    },
+    {
+      "feature": "Insulin",
+      "mean_abs_shap": 0.025734155291841917,
+      "mean_shap": 0.008443821654637593
+    },
+    {
+      "feature": "Pregnancies",
+      "mean_abs_shap": 0.02270589343466685,
+      "mean_shap": 0.005456927408812904
+    },
+    {
+      "feature": "SkinThickness",
+      "mean_abs_shap": 0.014893767200081495,
+      "mean_shap": -0.0034622108312232103
+    },
+    {
+      "feature": "BloodPressure",
+      "mean_abs_shap": 0.009310096320208874,
+      "mean_shap": 0.0004807552767335505
+    }
+  ],
+  "additivity_max_abs_error": 1.1102230246251565e-15,
+  "examples": {
+    "TP": {
+      "row_id": 415,
+      "probability": 0.7216084057027011,
+      "contributions": [
+        {
+          "feature": "Glucose",
+          "value": 173.0,
+          "imputed": false,
+          "shap_value": 0.3666152425193009,
+          "direction": "increases"
+        },
+        {
+          "feature": "Age",
+          "value": 22.0,
+          "imputed": false,
+          "shap_value": -0.07139188468535704,
+          "direction": "decreases"
+        },
+        {
+          "feature": "BMI",
+          "value": 35.7,
+          "imputed": false,
+          "shap_value": 0.06149081743009074,
+          "direction": "increases"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "value": 0.258,
+          "imputed": false,
+          "shap_value": -0.03980578430743603,
+          "direction": "decreases"
+        },
+        {
+          "feature": "Insulin",
+          "value": 474.0,
+          "imputed": false,
+          "shap_value": 0.03022828463059648,
+          "direction": "increases"
+        },
+        {
+          "feature": "SkinThickness",
+          "value": 33.0,
+          "imputed": false,
+          "shap_value": 0.01994880292665672,
+          "direction": "increases"
+        },
+        {
+          "feature": "BloodPressure",
+          "value": 84.0,
+          "imputed": false,
+          "shap_value": 0.0044699267058041885,
+          "direction": "increases"
+        },
+        {
+          "feature": "Pregnancies",
+          "value": 3.0,
+          "imputed": false,
+          "shap_value": -0.002075128939187841,
+          "direction": "decreases"
+        }
+      ]
+    },
+    "FN": {
+      "row_id": 38,
+      "probability": 0.1704868666480805,
+      "contributions": [
+        {
+          "feature": "Glucose",
+          "value": 90.0,
+          "imputed": false,
+          "shap_value": -0.2355094130427786,
+          "direction": "decreases"
+        },
+        {
+          "feature": "BMI",
+          "value": 38.2,
+          "imputed": false,
+          "shap_value": 0.04786558232581392,
+          "direction": "increases"
+        },
+        {
+          "feature": "Age",
+          "value": 27.0,
+          "imputed": false,
+          "shap_value": -0.03204627581727015,
+          "direction": "decreases"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "value": 0.503,
+          "imputed": false,
+          "shap_value": 0.029031751432037445,
+          "direction": "increases"
+        },
+        {
+          "feature": "Pregnancies",
+          "value": 2.0,
+          "imputed": false,
+          "shap_value": -0.019012792109520345,
+          "direction": "decreases"
+        },
+        {
+          "feature": "Insulin",
+          "value": 125.0,
+          "imputed": false,
+          "shap_value": 0.014828904021074809,
+          "direction": "increases"
+        },
+        {
+          "feature": "SkinThickness",
+          "value": 42.0,
+          "imputed": false,
+          "shap_value": 0.014171712140693241,
+          "direction": "increases"
+        },
+        {
+          "feature": "BloodPressure",
+          "value": 68.0,
+          "imputed": false,
+          "shap_value": -0.0009707317242019778,
+          "direction": "decreases"
+        }
+      ]
+    },
+    "FP": {
+      "row_id": 345,
+      "probability": 0.5548194826642774,
+      "contributions": [
+        {
+          "feature": "Age",
+          "value": 49.0,
+          "imputed": false,
+          "shap_value": 0.08015142954074972,
+          "direction": "increases"
+        },
+        {
+          "feature": "BMI",
+          "value": 38.5,
+          "imputed": false,
+          "shap_value": 0.07885782315937552,
+          "direction": "increases"
+        },
+        {
+          "feature": "Pregnancies",
+          "value": 8.0,
+          "imputed": false,
+          "shap_value": 0.06869299003477491,
+          "direction": "increases"
+        },
+        {
+          "feature": "Insulin",
+          "value": 108.0,
+          "imputed": false,
+          "shap_value": -0.04574830396087101,
+          "direction": "decreases"
+        },
+        {
+          "feature": "SkinThickness",
+          "value": 36.0,
+          "imputed": false,
+          "shap_value": 0.030146434396573243,
+          "direction": "increases"
+        },
+        {
+          "feature": "Glucose",
+          "value": 126.0,
+          "imputed": false,
+          "shap_value": -0.020911997834209852,
+          "direction": "decreases"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "value": 0.349,
+          "imputed": false,
+          "shap_value": 0.0076640815392049625,
+          "direction": "increases"
+        },
+        {
+          "feature": "BloodPressure",
+          "value": 88.0,
+          "imputed": false,
+          "shap_value": 0.0038388963664476522,
+          "direction": "increases"
+        }
+      ]
+    }
+  },
+  "background_size": 50,
+  "n_explained": 154
+}

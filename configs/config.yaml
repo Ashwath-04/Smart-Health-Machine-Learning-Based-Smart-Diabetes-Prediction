@@ -1,0 +1,133 @@
+# Smart Health: Diabetes Prediction — experiment configuration.
+# Every stage of training/evaluation reads from this file; nothing is hard-coded in src/.
+
+project:
+  name: smart-health-diabetes
+  random_seed: 42
+
+data:
+  raw_path: data/raw/diabetes.csv
+  processed_dir: data/processed
+  source_url: https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv
+  # SHA-256 of the exact file used for the reported results (dataset version pin).
+  sha256: 6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af
+  version: pima-uci-768-v1
+  target: Outcome
+  features:
+    - Pregnancies
+    - Glucose
+    - BloodPressure
+    - SkinThickness
+    - Insulin
+    - BMI
+    - DiabetesPedigreeFunction
+    - Age
+  # Columns where a recorded 0 is physiologically impossible for a living adult and is
+  # therefore treated as a missing measurement (see data/README.md for the rationale).
+  zero_as_missing:
+    - Glucose
+    - BloodPressure
+    - SkinThickness
+    - Insulin
+    - BMI
+
+split:
+  test_size: 0.20
+  stratify: true
+
+preprocessing:
+  version: "1.0.0"
+  imputation: median        # median (only strategy supported in v1; see data/README.md)
+  add_missing_indicators: false
+  engineered_features: false
+
+smote:
+  k_neighbors: 5
+  sampling_strategy: auto   # resample minority up to the majority count
+
+cv:
+  n_splits: 5
+  n_repeats: 3
+  stacking_inner_splits: 5
+  n_jobs: -1
+
+tuning:
+  enabled: true
+  # Threshold-free metric: the operating threshold is selected separately (Phase 9),
+  # so tuning on F1@0.5 would conflate hyperparameters with the threshold.
+  metric: average_precision
+  n_splits: 5
+  cv_seed: 7               # different from the evaluation CV seed to reduce optimism
+  n_trials:
+    xgboost: 40
+    extratrees: 40
+    catboost: 30
+  meta_n_trials: 40
+
+models:
+  logistic_regression:
+    C: 1.0
+    max_iter: 2000
+  random_forest:
+    n_estimators: 300
+    min_samples_leaf: 2
+  xgboost:
+    n_estimators: 300
+    max_depth: 4
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+  extratrees:
+    n_estimators: 300
+    min_samples_leaf: 2
+  catboost:
+    iterations: 400
+    depth: 5
+    learning_rate: 0.05
+  meta_learner:
+    C: 1.0
+    l1_ratio: 0.0           # 0 = L2, 1 = L1 (sklearn>=1.8 replaces `penalty` with `l1_ratio`)
+    solver: lbfgs
+
+selection:
+  # The deployed architecture is fixed a priori by the project brief (stacking + SMOTE),
+  # *before* looking at results. Comparisons against all other candidates are reported
+  # regardless of whether stacking wins. Set to "best_cv" to select by CV metric instead.
+  mode: fixed
+  fixed_model: stacking_smote_tuned
+  metric: average_precision
+
+calibration:
+  methods: [none, sigmoid, isotonic]
+  # Calibration is only adopted if it lowers the cross-validated Brier score by at least this much.
+  min_brier_improvement: 0.002
+
+threshold:
+  grid_start: 0.05
+  grid_stop: 0.95
+  grid_step: 0.01
+  default_mode: balanced
+  high_sensitivity_min_recall: 0.85
+  high_precision_min_precision: 0.75
+
+evaluation:
+  bootstrap_resamples: 2000
+
+explainability:
+  background_size: 50
+  max_global_samples: 154
+
+stability:
+  enabled: true
+  seeds: [0, 1, 2, 3, 4]
+
+mlflow:
+  enabled: true
+  tracking_uri: sqlite:///mlflow.db   # MLflow 3 file store is in maintenance mode
+  experiment_name: smart-health-diabetes
+
+paths:
+  models_dir: models
+  reports_dir: reports
+  figures_dir: reports/figures
+  metrics_dir: reports/metrics

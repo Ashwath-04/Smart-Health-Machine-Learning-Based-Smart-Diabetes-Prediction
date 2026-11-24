@@ -1,0 +1,65 @@
+2026/10/06 12:27:12 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/10/06 12:27:12 INFO mlflow.store.db.utils: Updating database tables
+2026/10/06 12:27:13 INFO mlflow.tracking.fluent: Experiment with name 'smart-health-diabetes' does not exist. Creating a new experiment.
+2026-10-06 12:27:13,092 INFO src.training.train: Validated dataset: 768 rows, 0 duplicates
+2026-10-06 12:27:27,171 INFO src.training.tune: xgboost best CV average_precision = 0.7376
+2026-10-06 12:27:27,176 INFO src.training.train: Tuned xgboost in 12s
+2026-10-06 12:27:38,881 INFO src.training.tune: extratrees best CV average_precision = 0.7447
+2026-10-06 12:27:38,885 INFO src.training.train: Tuned extratrees in 12s
+2026-10-06 12:28:13,218 INFO src.training.tune: catboost best CV average_precision = 0.7510
+2026-10-06 12:28:13,222 INFO src.training.train: Tuned catboost in 34s
+2026-10-06 12:28:15,297 INFO src.training.train: CV logistic_regression_nosmote_default  AP=0.7406 AUC=0.8425 F1@.5=0.6461 Rec@.5=0.5735 (0s)
+2026-10-06 12:28:15,512 INFO src.training.train: CV logistic_regression_smote_default    AP=0.7390 AUC=0.8409 F1@.5=0.6798 Rec@.5=0.7181 (0s)
+2026-10-06 12:28:16,089 INFO src.training.train: CV random_forest_nosmote_default        AP=0.7182 AUC=0.8250 F1@.5=0.6263 Rec@.5=0.5798 (0s)
+2026-10-06 12:28:16,714 INFO src.training.train: CV random_forest_smote_default          AP=0.7055 AUC=0.8232 F1@.5=0.6607 Rec@.5=0.6841 (0s)
+2026-10-06 12:28:17,008 INFO src.training.train: CV xgboost_nosmote_default              AP=0.6927 AUC=0.8030 F1@.5=0.6228 Rec@.5=0.5999 (0s)
+2026-10-06 12:28:17,324 INFO src.training.train: CV xgboost_smote_default                AP=0.6962 AUC=0.8075 F1@.5=0.6390 Rec@.5=0.6607 (0s)
+2026-10-06 12:28:17,804 INFO src.training.train: CV extratrees_nosmote_default           AP=0.7397 AUC=0.8415 F1@.5=0.6072 Rec@.5=0.5207 (0s)
+2026-10-06 12:28:18,306 INFO src.training.train: CV extratrees_smote_default             AP=0.7332 AUC=0.8406 F1@.5=0.6823 Rec@.5=0.7166 (0s)
+2026-10-06 12:28:19,078 INFO src.training.train: CV catboost_nosmote_default             AP=0.7157 AUC=0.8135 F1@.5=0.6242 Rec@.5=0.6031 (1s)
+2026-10-06 12:28:20,130 INFO src.training.train: CV catboost_smote_default               AP=0.7115 AUC=0.8144 F1@.5=0.6511 Rec@.5=0.6731 (1s)
+2026-10-06 12:28:25,578 INFO src.training.train: CV stacking_nosmote_default             AP=0.7298 AUC=0.8324 F1@.5=0.6198 Rec@.5=0.5626 (5s)
+2026-10-06 12:28:33,434 INFO src.training.train: CV stacking_smote_default               AP=0.7283 AUC=0.8336 F1@.5=0.6393 Rec@.5=0.5968 (8s)
+2026-10-06 12:28:33,839 INFO src.training.train: CV xgboost_nosmote_tuned                AP=0.7126 AUC=0.8220 F1@.5=0.6316 Rec@.5=0.5999 (0s)
+2026-10-06 12:28:34,346 INFO src.training.train: CV xgboost_smote_tuned                  AP=0.7073 AUC=0.8211 F1@.5=0.6607 Rec@.5=0.6886 (0s)
+2026-10-06 12:28:35,267 INFO src.training.train: CV extratrees_nosmote_tuned             AP=0.7541 AUC=0.8454 F1@.5=0.5846 Rec@.5=0.4706 (1s)
+2026-10-06 12:28:36,156 INFO src.training.train: CV extratrees_smote_tuned               AP=0.7472 AUC=0.8454 F1@.5=0.6860 Rec@.5=0.7399 (1s)
+2026-10-06 12:28:36,843 INFO src.training.train: CV catboost_nosmote_tuned               AP=0.7453 AUC=0.8404 F1@.5=0.6231 Rec@.5=0.5595 (0s)
+2026-10-06 12:28:37,688 INFO src.training.train: CV catboost_smote_tuned                 AP=0.7365 AUC=0.8372 F1@.5=0.6893 Rec@.5=0.7555 (1s)
+2026-10-06 12:28:45,224 INFO src.training.train: CV stacking_nosmote_tuned               AP=0.7446 AUC=0.8412 F1@.5=0.6250 Rec@.5=0.5642 (7s)
+2026-10-06 12:28:55,240 INFO src.training.train: CV stacking_smote_tuned                 AP=0.7434 AUC=0.8414 F1@.5=0.6401 Rec@.5=0.6000 (10s)
+2026-10-06 12:28:56,981 INFO src.training.train: CV soft_voting_smote_tuned              AP=0.7333 AUC=0.8371 F1@.5=0.6747 Rec@.5=0.7229 (2s)
+2026-10-06 12:29:20,309 INFO src.training.train: stability seed=0 logistic_regression_nosmote_default AP=0.7283
+2026-10-06 12:29:20,461 INFO src.training.train: stability seed=0 xgboost_smote_tuned AP=0.7042
+2026-10-06 12:29:20,848 INFO src.training.train: stability seed=0 extratrees_smote_tuned AP=0.7288
+2026-10-06 12:29:21,272 INFO src.training.train: stability seed=0 catboost_smote_tuned AP=0.7209
+2026-10-06 12:29:26,065 INFO src.training.train: stability seed=0 stacking_smote_tuned AP=0.7216
+2026-10-06 12:29:30,130 INFO src.training.train: stability seed=0 stacking_nosmote_tuned AP=0.7288
+2026-10-06 12:29:30,187 INFO src.training.train: stability seed=1 logistic_regression_nosmote_default AP=0.7401
+2026-10-06 12:29:30,336 INFO src.training.train: stability seed=1 xgboost_smote_tuned AP=0.7248
+2026-10-06 12:29:30,770 INFO src.training.train: stability seed=1 extratrees_smote_tuned AP=0.7453
+2026-10-06 12:29:31,224 INFO src.training.train: stability seed=1 catboost_smote_tuned AP=0.7536
+2026-10-06 12:29:36,125 INFO src.training.train: stability seed=1 stacking_smote_tuned AP=0.7513
+2026-10-06 12:29:40,172 INFO src.training.train: stability seed=1 stacking_nosmote_tuned AP=0.7536
+2026-10-06 12:29:40,226 INFO src.training.train: stability seed=2 logistic_regression_nosmote_default AP=0.7317
+2026-10-06 12:29:40,376 INFO src.training.train: stability seed=2 xgboost_smote_tuned AP=0.6900
+2026-10-06 12:29:40,788 INFO src.training.train: stability seed=2 extratrees_smote_tuned AP=0.7352
+2026-10-06 12:29:41,218 INFO src.training.train: stability seed=2 catboost_smote_tuned AP=0.7284
+2026-10-06 12:29:45,984 INFO src.training.train: stability seed=2 stacking_smote_tuned AP=0.7312
+2026-10-06 12:29:50,167 INFO src.training.train: stability seed=2 stacking_nosmote_tuned AP=0.7320
+2026-10-06 12:29:50,223 INFO src.training.train: stability seed=3 logistic_regression_nosmote_default AP=0.7288
+2026-10-06 12:29:50,372 INFO src.training.train: stability seed=3 xgboost_smote_tuned AP=0.7161
+2026-10-06 12:29:50,779 INFO src.training.train: stability seed=3 extratrees_smote_tuned AP=0.7364
+2026-10-06 12:29:51,236 INFO src.training.train: stability seed=3 catboost_smote_tuned AP=0.7287
+2026-10-06 12:29:56,342 INFO src.training.train: stability seed=3 stacking_smote_tuned AP=0.7338
+2026-10-06 12:30:00,700 INFO src.training.train: stability seed=3 stacking_nosmote_tuned AP=0.7380
+2026-10-06 12:30:00,757 INFO src.training.train: stability seed=4 logistic_regression_nosmote_default AP=0.7268
+2026-10-06 12:30:00,898 INFO src.training.train: stability seed=4 xgboost_smote_tuned AP=0.7238
+2026-10-06 12:30:01,304 INFO src.training.train: stability seed=4 extratrees_smote_tuned AP=0.7346
+2026-10-06 12:30:01,750 INFO src.training.train: stability seed=4 catboost_smote_tuned AP=0.7231
+2026-10-06 12:30:06,814 INFO src.training.train: stability seed=4 stacking_smote_tuned AP=0.7286
+2026-10-06 12:30:11,130 INFO src.training.train: stability seed=4 stacking_nosmote_tuned AP=0.7271
+2026-10-06 12:30:11,131 INFO src.training.train: Training finished in 3.0 min. Deployed: stacking_smote_tuned
+
+Deployed model: stacking_smote_tuned
+Best by CV    : extratrees_nosmote_tuned

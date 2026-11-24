@@ -1,0 +1,11 @@
+Model: stacking_smote_tuned
+Threshold (balanced, chosen on training OOF): 0.32
+
+              precision    recall  f1-score   support
+
+Non-diabetic      0.877     0.710     0.785       100
+    Diabetic      0.603     0.815     0.693        54
+
+    accuracy                          0.747       154
+   macro avg      0.740     0.762     0.739       154
+weighted avg      0.781     0.747     0.752       154

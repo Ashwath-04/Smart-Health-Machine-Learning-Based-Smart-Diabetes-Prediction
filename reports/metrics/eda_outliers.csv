@@ -1,0 +1,9 @@
+feature,lower_fence,upper_fence,n_low,n_high,min,max
+Pregnancies,-6.5,13.5,0,4,0.0,17.0
+Glucose,36.0,204.0,0,0,44.0,199.0
+BloodPressure,40.0,104.0,4,10,24.0,122.0
+SkinThickness,1.0,57.0,0,3,7.0,99.0
+Insulin,-94.375,360.625,0,24,14.0,846.0
+BMI,13.849999999999998,50.25,0,8,18.2,67.1
+DiabetesPedigreeFunction,-0.32999999999999996,1.2,0,29,0.078,2.42
+Age,-1.5,66.5,0,9,21.0,81.0

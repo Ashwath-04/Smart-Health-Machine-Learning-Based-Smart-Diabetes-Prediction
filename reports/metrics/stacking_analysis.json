@@ -1,0 +1,73 @@
+{
+  "note": "Computed on out-of-fold base-learner probabilities from the training set only.",
+  "oof_correlation": {
+    "xgboost": {
+      "xgboost": 1.0,
+      "extratrees": 0.928,
+      "catboost": 0.9601
+    },
+    "extratrees": {
+      "xgboost": 0.928,
+      "extratrees": 1.0,
+      "catboost": 0.9617
+    },
+    "catboost": {
+      "xgboost": 0.9601,
+      "extratrees": 0.9617,
+      "catboost": 1.0
+    }
+  },
+  "meta_coefficients": {
+    "xgboost": 0.5707382607994117,
+    "extratrees": 2.9460105006833155,
+    "catboost": 2.1711425574894747
+  },
+  "meta_intercept": -3.3277622966048788,
+  "meta_standardized_coefficients": {
+    "xgboost": 0.18653787250921094,
+    "extratrees": 0.6102764600179662,
+    "catboost": 0.638174786719824
+  },
+  "all_bases": {
+    "pr_auc": 0.7175246952365057,
+    "roc_auc": 0.8393457943925234,
+    "f1@0.5": 0.6395939086294417
+  },
+  "drop_one": {
+    "xgboost": {
+      "pr_auc": 0.7180523903517644,
+      "roc_auc": 0.841285046728972,
+      "f1@0.5": 0.6430379746835443,
+      "delta_pr_auc": 0.0005276951152586307
+    },
+    "extratrees": {
+      "pr_auc": 0.7085334909061302,
+      "roc_auc": 0.8330841121495328,
+      "f1@0.5": 0.6451612903225806,
+      "delta_pr_auc": -0.00899120433037559
+    },
+    "catboost": {
+      "pr_auc": 0.7128857855962758,
+      "roc_auc": 0.8381425233644861,
+      "f1@0.5": 0.654911838790932,
+      "delta_pr_auc": -0.004638909640229949
+    }
+  },
+  "single_base_raw": {
+    "xgboost": {
+      "pr_auc": 0.6959602571187304,
+      "roc_auc": 0.8238434579439252,
+      "f1@0.5": 0.6770601336302895
+    },
+    "extratrees": {
+      "pr_auc": 0.7232400772207466,
+      "roc_auc": 0.8448247663551403,
+      "f1@0.5": 0.6842105263157895
+    },
+    "catboost": {
+      "pr_auc": 0.7179025089196935,
+      "roc_auc": 0.8360630841121495,
+      "f1@0.5": 0.702355460385439
+    }
+  }
+}

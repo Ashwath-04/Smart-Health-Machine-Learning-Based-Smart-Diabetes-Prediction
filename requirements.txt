@@ -1,0 +1,10 @@
+# Full environment: training, evaluation, experiment tracking, notebooks and tests.
+# Pinned to the exact versions used to produce the reported results (Python 3.12).
+-r requirements-serve.txt
+optuna==5.0.0
+mlflow==3.16.1
+pytest==9.1.1
+httpx==0.28.1
+nbformat==5.11.1
+nbconvert==7.17.1
+ipykernel==7.4.0

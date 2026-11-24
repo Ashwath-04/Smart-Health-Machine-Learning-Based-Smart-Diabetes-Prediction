@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Experiment tracking / logs
+mlflow.db
+mlruns/
+mlartifacts/
+/logs/
+catboost_info/
+
+# Large intermediate artifacts (regenerate with `python scripts/train.py`)
+models/candidates/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Portfolio export policy: no datasets, no trained weights in git ---
+data/**
+!data/**/
+!data/**/README.md
+!data/**/.gitkeep
+models/*.joblib
+*.pt
+*.pth
+*.onnx
+*.npz
+mlflow.db
+.venv/
+# row-level patient tables written by scripts/evaluate.py (they contain raw feature values)
+reports/metrics/errors_test.csv
+reports/metrics/errors_train_oof.csv
+reports/metrics/borderline_cases_test.csv
+models/shap_background.csv

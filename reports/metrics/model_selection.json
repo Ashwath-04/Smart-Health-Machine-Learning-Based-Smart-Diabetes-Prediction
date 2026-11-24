@@ -1,0 +1,9 @@
+{
+  "mode": "fixed",
+  "deployed_model": "stacking_smote_tuned",
+  "best_by_cv": "extratrees_nosmote_tuned",
+  "selection_metric": "pr_auc_mean",
+  "deployed_cv_score": 0.7433980543301811,
+  "best_cv_score": 0.7541180227646506,
+  "note": "Deployed architecture fixed a priori by the project brief; best_by_cv reported for transparency."
+}

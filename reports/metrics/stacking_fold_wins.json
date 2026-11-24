@@ -1,0 +1,17 @@
+{
+  "xgboost_smote_tuned": {
+    "folds_stack_higher_f1@0.5": 3,
+    "folds_stack_higher_pr_auc": 14,
+    "n_folds": 15
+  },
+  "extratrees_smote_tuned": {
+    "folds_stack_higher_f1@0.5": 1,
+    "folds_stack_higher_pr_auc": 6,
+    "n_folds": 15
+  },
+  "catboost_smote_tuned": {
+    "folds_stack_higher_f1@0.5": 1,
+    "folds_stack_higher_pr_auc": 11,
+    "n_folds": 15
+  }
+}

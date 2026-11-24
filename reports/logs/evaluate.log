@@ -1,0 +1,25 @@
+
+[SHAP ExactExplainer progress bar removed]
+2026-10-06 12:31:42,973 INFO src.evaluation.evaluate: Evaluation complete. Deployed stacking_smote_tuned: test F1=0.693 recall=0.815 AUC=0.821
+                          candidate                                    display_name  threshold  accuracy  precision   recall       f1  roc_auc   pr_auc  specificity  sensitivity    brier  selected
+           extratrees_smote_default                    ExtraTrees | SMOTE | default       0.35  0.727273   0.583333 0.777778 0.666667 0.826481 0.715327         0.70     0.777778 0.162729     False
+                xgboost_smote_tuned                         XGBoost | SMOTE | tuned       0.33  0.733766   0.594203 0.759259 0.666667 0.822407 0.714610         0.72     0.759259 0.163220     False
+             stacking_smote_default    Stacking (XGB+ET+CB -> LR) | SMOTE | default       0.26  0.707792   0.554217 0.851852 0.671533 0.825926 0.711400         0.63     0.851852 0.162940     False
+               stacking_smote_tuned      Stacking (XGB+ET+CB -> LR) | SMOTE | tuned       0.32  0.746753   0.602740 0.814815 0.692913 0.820556 0.708788         0.71     0.814815 0.166254      True
+        random_forest_smote_default                 Random Forest | SMOTE | default       0.39  0.727273   0.583333 0.777778 0.666667 0.817222 0.707048         0.70     0.777778 0.166614     False
+             extratrees_smote_tuned                      ExtraTrees | SMOTE | tuned       0.31  0.733766   0.584416 0.833333 0.687023 0.825370 0.706825         0.68     0.833333 0.163535     False
+            soft_voting_smote_tuned         Soft Voting (XGB+ET+CB) | SMOTE | tuned       0.31  0.733766   0.586667 0.814815 0.682171 0.821296 0.706543         0.69     0.814815 0.164304     False
+              xgboost_nosmote_tuned                      XGBoost | no SMOTE | tuned       0.30  0.714286   0.569444 0.759259 0.650794 0.820000 0.706110         0.69     0.759259 0.169789     False
+            xgboost_nosmote_default                    XGBoost | no SMOTE | default       0.27  0.733766   0.582278 0.851852 0.691729 0.823148 0.700554         0.67     0.851852 0.162468     False
+      random_forest_nosmote_default              Random Forest | no SMOTE | default       0.36  0.733766   0.594203 0.759259 0.666667 0.813333 0.698301         0.72     0.759259 0.166257     False
+             stacking_nosmote_tuned   Stacking (XGB+ET+CB -> LR) | no SMOTE | tuned       0.24  0.720779   0.567901 0.851852 0.681481 0.818333 0.692846         0.65     0.851852 0.168875     False
+               catboost_smote_tuned                        CatBoost | SMOTE | tuned       0.30  0.714286   0.565789 0.796296 0.661538 0.811111 0.692805         0.67     0.796296 0.169900     False
+         extratrees_nosmote_default                 ExtraTrees | no SMOTE | default       0.35  0.733766   0.594203 0.759259 0.666667 0.821667 0.689392         0.72     0.759259 0.166478     False
+              xgboost_smote_default                       XGBoost | SMOTE | default       0.37  0.746753   0.619048 0.722222 0.666667 0.817963 0.682551         0.76     0.722222 0.163854     False
+             catboost_nosmote_tuned                     CatBoost | no SMOTE | tuned       0.29  0.733766   0.586667 0.814815 0.682171 0.820741 0.682077         0.69     0.814815 0.166889     False
+           extratrees_nosmote_tuned                   ExtraTrees | no SMOTE | tuned       0.34  0.720779   0.577465 0.759259 0.656000 0.813889 0.681671         0.70     0.759259 0.171050     False
+           stacking_nosmote_default Stacking (XGB+ET+CB -> LR) | no SMOTE | default       0.26  0.727273   0.575000 0.851852 0.686567 0.817778 0.679145         0.66     0.851852 0.169596     False
+  logistic_regression_smote_default           Logistic Regression | SMOTE | default       0.36  0.714286   0.583333 0.648148 0.614035 0.811296 0.675828         0.75     0.648148 0.175209     False
+logistic_regression_nosmote_default        Logistic Regression | no SMOTE | default       0.37  0.733766   0.614035 0.648148 0.630631 0.812963 0.673326         0.78     0.648148 0.175420     False
+             catboost_smote_default                      CatBoost | SMOTE | default       0.36  0.733766   0.603175 0.703704 0.649573 0.812593 0.661656         0.75     0.703704 0.166815     False
+           catboost_nosmote_default                   CatBoost | no SMOTE | default       0.27  0.701299   0.551282 0.796296 0.651515 0.803148 0.638693         0.65     0.796296 0.175345     False
